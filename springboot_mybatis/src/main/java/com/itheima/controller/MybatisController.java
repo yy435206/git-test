@@ -16,23 +16,30 @@ public class MybatisController {
     @Autowired
     private UserMapper userMapper;
 
-    @RequestMapping(value = "/query",method = RequestMethod.POST)
+    @RequestMapping(value = "/query", method = RequestMethod.POST)
     @ResponseBody
-    public List<User> queryUserList(){
+    public List<User> queryUserList() {
         List<User> users = userMapper.findAll();
         return users;
     }
-    @RequestMapping(value = "/query2",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/query2", method = RequestMethod.GET)
     @ResponseBody
-    public List<User> queryUserList2(){
+    public List<User> queryUserList2() {
         List<User> users = userMapper.findAll();
         return users;
     }
-    @RequestMapping(value = "/query3",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/query3", method = RequestMethod.GET)
     @ResponseBody
-    public List<User> queryUserList3(){
+    public List<User> queryUserList3() {
         List<User> users = userMapper.findAll();
         return users;
+    }
+
+    public void test() {
+        int i = 1;
+        System.out.println(i);
     }
 
 }
