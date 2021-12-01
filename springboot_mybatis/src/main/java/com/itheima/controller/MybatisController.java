@@ -28,5 +28,11 @@ public class MybatisController {
         List<User> users = userMapper.findAll();
         return users;
     }
+    @RequestMapping(value = "/query3",method = RequestMethod.GET)
+    @ResponseBody
+    public List<User> queryUserList3(){
+        List<User> users = userMapper.findAll();
+        return users;
+    }
 
 }
